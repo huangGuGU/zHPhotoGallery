@@ -1,0 +1,207 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>City Selection</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='choose_city_botton.css') }}">
+</head>
+<body>
+<header>
+    <h1>2024城市集</h1>
+</header>
+
+<!-- 城市图片选择部分 -->
+<div class="city-gallery">
+    <div class="city">
+        <a href="{{ url_for('city_gallery', city='无锡') }}">
+            <img src="{{ url_for('static', filename='../static/images/标签图片/无锡.jpg') }}"
+                 alt="无锡" class="city-img" data-city="无锡">
+        </a>
+        <div class="city-name">
+            <span class="city-chinese">无锡</span>
+            <br>
+            <span class="city-english">Wuxi</span>
+        </div>
+    </div>
+    <div class="city">
+        <a href="{{ url_for('city_gallery', city='上海') }}">
+            <img src="{{ url_for('static', filename='../static/images/标签图片/上海.jpg') }}"
+                 alt="上海" class="city-img" data-city="上海">
+        </a>
+        <div class="city-name">
+            <span class="city-chinese">上海</span>
+            <br>
+            <span class="city-english">Shanghai</span>
+        </div>
+    </div>
+
+    <div class="city">
+        <a href="{{ url_for('city_gallery', city='天津') }}">
+            <img src="{{ url_for('static', filename='../static/images/标签图片/天津.jpg') }}"
+                 alt="天津" class="city-img" data-city="天津">
+        </a>
+        <div class="city-name">
+            <span class="city-chinese">天津</span>
+            <br>
+            <span class="city-english">Tianjin</span>
+        </div>
+    </div>
+    <div class="city">
+        <a href="{{ url_for('city_gallery', city='北京') }}">
+            <img src="{{ url_for('static', filename='../static/images/标签图片/北京.jpg') }}"
+                 alt="北京" class="city-img" data-city="北京">
+        </a>
+        <div class="city-name">
+            <span class="city-chinese">北京</span>
+            <br>
+            <span class="city-english">Peking</span>
+        </div>
+    </div>
+    <div class="city">
+        <a href="{{ url_for('city_gallery', city='济南') }}">
+            <img src="{{ url_for('static', filename='../static/images/标签图片/济南.jpg') }}"
+                 alt="济南" class="city-img" data-city="济南">
+        </a>
+        <div class="city-name">
+            <span class="city-chinese">济南</span>
+            <br>
+            <span class="city-english">Jinan</span>
+        </div>
+    </div>
+    <div class="city">
+        <a href="{{ url_for('city_gallery', city='临沂') }}">
+            <img src="{{ url_for('static', filename='../static/images/标签图片/临沂.jpg') }}"
+                 alt="临沂" class="city-img" data-city="临沂">
+        </a>
+        <div class="city-name">
+            <span class="city-chinese">临沂</span>
+            <br>
+            <span class="city-english">Linyi</span>
+        </div>
+    </div>
+
+    <div class="city">
+        <a href="{{ url_for('city_gallery', city='青岛') }}">
+            <img src="{{ url_for('static', filename='../static/images/标签图片/青岛.jpg') }}"
+                 alt="青岛" class="city-img" data-city="青岛">
+        </a>
+        <div class="city-name">
+            <span class="city-chinese">青岛</span>
+            <br>
+            <span class="city-english">Tsingtao</span>
+        </div>
+    </div>
+    <div class="city">
+        <a href="{{ url_for('city_gallery', city='新加坡') }}">
+            <img src="{{ url_for('static', filename='../static/images/标签图片/新加坡.jpg') }}"
+                 alt="新加坡" class="city-img" data-city="新加坡">
+        </a>
+        <div class="city-name">
+            <span class="city-chinese">新加坡</span>
+            <br>
+            <span class="city-english">Singapore</span>
+        </div>
+    </div>
+    <div class="city">
+        <a href="{{ url_for('city_gallery', city='吉隆坡') }}">
+            <img src="{{ url_for('static', filename='../static/images/标签图片/吉隆坡.jpg') }}"
+                 alt="吉隆坡" class="city-img" data-city="吉隆坡">
+        </a>
+        <div class="city-name">
+            <span class="city-chinese">吉隆坡</span>
+            <br>
+            <span class="city-english">Kuala Lumpur</span>
+        </div>
+    </div>
+
+    <div class="city">
+        <a href="{{ url_for('city_gallery', city='马六甲') }}">
+            <img src="{{ url_for('static', filename='../static/images/标签图片/马六甲.jpg') }}"
+                 alt="马六甲" class="city-img" data-city="马六甲">
+        </a>
+        <div class="city-name">
+            <span class="city-chinese">马六甲</span>
+            <br>
+            <span class="city-english">Malacca</span>
+        </div>
+    </div>
+    <div class="city">
+        <a href="{{ url_for('city_gallery', city='南昌') }}">
+            <img src="{{ url_for('static', filename='../static/images/标签图片/南昌.jpg') }}"
+                 alt="南昌" class="city-img" data-city="南昌">
+        </a>
+        <div class="city-name">
+            <span class="city-chinese">南昌</span>
+            <br>
+            <span class="city-english">Nanchang</span>
+        </div>
+    </div>
+    <div class="city">
+        <a href="{{ url_for('city_gallery', city='长沙') }}">
+            <img src="{{ url_for('static', filename='../static/images/标签图片/长沙.jpg') }}"
+                 alt="长沙" class="city-img" data-city="长沙">
+        </a>
+        <div class="city-name">
+            <span class="city-chinese">长沙</span>
+            <br>
+            <span class="city-english">Changsha</span>
+        </div>
+    </div>
+
+    <div class="city">
+        <a href="{{ url_for('city_gallery', city='广州') }}">
+            <img src="{{ url_for('static', filename='../static/images/标签图片/广州.jpg') }}"
+                 alt="广州" class="city-img" data-city="广州">
+        </a>
+        <div class="city-name">
+            <span class="city-chinese">广州</span>
+            <br>
+            <span class="city-english">Canton</span>
+        </div>
+    </div>
+    <div class="city">
+        <a href="{{ url_for('city_gallery', city='沈阳') }}">
+            <img src="{{ url_for('static', filename='../static/images/标签图片/沈阳.jpg') }}"
+                 alt="沈阳" class="city-img" data-city="沈阳">
+        </a>
+        <div class="city-name">
+            <span class="city-chinese">沈阳</span>
+            <br>
+            <span class="city-english">Shenyang</span>
+        </div>
+    </div>
+    <div class="city">
+        <a href="{{ url_for('city_gallery', city='丹东') }}">
+            <img src="{{ url_for('static', filename='../static/images/标签图片/丹东.jpg') }}"
+                 alt="丹东" class="city-img" data-city="丹东">
+        </a>
+        <div class="city-name">
+            <span class="city-chinese">丹东</span>
+            <br>
+            <span class="city-english">Dandong</span>
+        </div>
+    </div>
+    <div class="city">
+        <a href="{{ url_for('city_gallery', city='大连') }}">
+            <img src="{{ url_for('static', filename='../static/images/标签图片/大连.jpg') }}"
+                 alt="大连" class="city-img" data-city="大连">
+        </a>
+        <div class="city-name">
+            <span class="city-chinese">大连</span>
+            <br>
+            <span class="city-english">Dalian</span>
+        </div>
+    </div>
+</div>
+
+<!--<footer>-->
+<!--    <p>&copy; 2024 zH Photography</p>-->
+<!--</footer>-->
+</body>
+</html>
+<script type="text/javascript">
+    document.addEventListener('contextmenu', function(e) {
+        e.preventDefault();
+    });
+</script>

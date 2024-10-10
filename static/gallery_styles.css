@@ -1,0 +1,72 @@
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f4f4f4;
+}
+
+header {
+    background-color: #49b1c2;
+    color: white;
+    padding: 10px 0;
+    text-align: center;
+}
+
+.gallery {
+    display: grid;
+    gap: 10px;  /* 图片之间的间距 */
+    margin: 20px;
+}
+
+.horizontal {
+    grid-template-columns: repeat(2, 1fr);  /* 横向图片，每行 2 个 */
+}
+
+.vertical {
+    grid-template-columns: repeat(3, 1fr);  /* 纵向图片，每行 4 个 */
+}
+
+.gallery img {
+    height: 450px;
+    width: auto;
+    border: 5px solid #ddd;          /* 边框 */
+    border-radius: 5px;              /* 圆角 */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* 阴影 */
+    transition: transform 0.3s, box-shadow 0.3s; /* 动画效果 */
+    display: block;                  /* 使图片为块级元素 */
+    margin: auto;                    /* 使图片在容器内居中 */
+    object-fit: cover;       /* 使图片按比例填充容器 */
+
+}
+
+.gallery img:hover {
+    transform: scale(1.05);
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+}
+
+footer {
+    text-align: center;
+    padding: 10px;
+    background-color: #333;
+    color: white;
+    position: fixed;
+    width: 100%;
+    bottom: 0;
+}
+
+.horizontal img {
+    height: 450px;                   /* 设置固定高度 */
+    width: auto;                     /* 宽度自动调整，保持比例 */
+}
+
+
+.vertical img {
+    height: auto;                   /* 设置固定高度 */
+    width: 450px;                     /* 宽度自动调整，保持比例 */
+}
+
+img {
+
+    -webkit-user-drag: none; /* 禁用图片拖动 */
+    user-select: none; /* 禁止用户选择图片 */
+}

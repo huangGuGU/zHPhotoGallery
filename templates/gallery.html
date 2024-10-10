@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>{{ city }} Gallery</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='gallery_styles.css') }}">
+    <link rel="stylesheet" href="{{ url_for('static', filename='choose_city_botton.css') }}">
+</head>
+<body>
+<header>
+    <h1>{{ city | capitalize }} 摄影画廊</h1>
+</header>
+
+
+<div class="gallery horizontal">
+    {% for image in images[0] %}
+    <img src="{{ url_for('static', filename='images/' + image) }}" alt="{{ image }}">
+    {% endfor %}
+</div>
+
+<div class="gallery vertical">
+    {% for image in images[1] %}
+    <img src="{{ url_for('static', filename='images/' + image) }}" alt="{{ image }}">
+    {% endfor %}
+</div>
+<!-- 返回按钮 -->
+<div class="back-button">
+    <a href="{{ url_for('choose_city_index') }}" class="city-back-button">返回</a>
+
+</div>
+
+</body>
+</html>
+<script type="text/javascript">
+    document.addEventListener('contextmenu', function(e) {
+        e.preventDefault();
+    });
+</script>

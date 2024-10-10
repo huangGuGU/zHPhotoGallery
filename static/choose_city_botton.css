@@ -1,0 +1,151 @@
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f4f4f4;
+}
+
+header {
+    background-color: #64b8bc;
+    color: white;
+    padding: 10px 0;
+    text-align: center;
+}
+
+.city-gallery {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 20px;
+    margin-top: 20px;
+}
+
+.city {
+    position: relative; /* 使子元素相对于城市块进行定位 */
+    text-align: center;
+    flex-basis: calc(33.33% - 40px); /* 每行 3 个城市 */
+    margin-bottom: 20px;
+}
+
+.city img {
+    width: 400px; /* 缩小城市图片的宽度 */
+    height: auto;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s;
+}
+
+.city img:hover {
+    transform: scale(1.05);
+}
+
+.city-name {
+    position: absolute;
+    font-family: 'Arial', sans-serif;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    text-align: center;
+    color: white;
+    font-weight: bold;
+    opacity: 0;  /* 初始隐藏 */
+    transition: opacity 0.3s;
+}
+
+.city:hover .city-name {
+    opacity: 1;  /* 鼠标悬停时显示 */
+}
+
+.city-chinese {
+    font-size: 60px;  /* 中文名字的字体大小 */
+}
+
+.city-english {
+    font-size: 20px;  /* 英文名字的字体大小 */
+    margin-top: 5px;
+}
+
+.back-button {
+    text-align: center; /* 将文本内容居中 */
+    margin: 20px 0; /* 上下留出间距 */
+}
+
+.city-back-button {
+    display: inline-block; /* 让链接表现得像一个块级元素，便于设置边距 */
+    padding: 20px 300px; /* 设置内边距 */
+    background-color: #4cacaf; /* 背景色 */
+    color: white; /* 字体颜色 */
+    text-decoration: none; /* 去掉下划线 */
+    border-radius: 10px; /* 边框圆角 */
+    transition: background-color 0.3s; /* 添加过渡效果 */
+}
+
+.city-back-button:hover {
+    background-color: #386cbc; /* 鼠标悬停时的背景色 */
+}
+footer {
+    text-align: center;
+    padding: 10px;
+    background-color: #333;
+    color: white;
+    position: fixed;
+    width: 100%;
+    bottom: 0;
+}
+
+/* 当系统处于暗黑模式时，使用带有 _night 后缀的图片 */
+@media (prefers-color-scheme: dark) {
+    .city-img[data-city="无锡"] {
+        content: url('../static/images/标签图片_night/无锡.jpg');
+    }
+    .city-img[data-city="上海"] {
+        content: url('../static/images/标签图片_night/上海.jpg');
+    }
+    .city-img[data-city="天津"] {
+        content: url('../static/images/标签图片_night/天津.jpg');
+    }
+    .city-img[data-city="北京"] {
+        content: url('../static/images/标签图片_night/北京.jpg');
+    }
+    .city-img[data-city="济南"] {
+        content: url('../static/images/标签图片_night/济南.jpg');
+    }
+    .city-img[data-city="临沂"] {
+        content: url('../static/images/标签图片_night/临沂.jpg');
+    }
+    .city-img[data-city="青岛"] {
+        content: url('../static/images/标签图片_night/青岛.jpg');
+    }
+    .city-img[data-city="新加坡"] {
+        content: url('../static/images/标签图片_night/新加坡.jpg');
+    }
+    .city-img[data-city="吉隆坡"] {
+        content: url('../static/images/标签图片_night/吉隆坡.jpg');
+    }
+    .city-img[data-city="马六甲"] {
+        content: url('../static/images/标签图片_night/马六甲.jpg');
+    }
+    .city-img[data-city="南昌"] {
+        content: url('../static/images/标签图片_night/南昌.jpg');
+    }
+    .city-img[data-city="长沙"] {
+        content: url('../static/images/标签图片_night/长沙.jpg');
+    }
+    .city-img[data-city="广州"] {
+        content: url('../static/images/标签图片_night/广州.jpg');
+    }
+    .city-img[data-city="沈阳"] {
+        content: url('../static/images/标签图片_night/沈阳.jpg');
+    }
+    .city-img[data-city="丹东"] {
+        content: url('../static/images/标签图片_night/丹东.jpg');
+    }
+    .city-img[data-city="大连"] {
+        content: url('../static/images/标签图片_night/大连.jpg');
+    }
+}
+img {
+
+    -webkit-user-drag: none; /* 禁用图片拖动 */
+    user-select: none; /* 禁止用户选择图片 */
+}

@@ -1,9 +1,8 @@
 import cv2
 from flask import Flask, render_template
+import os
 
 app = Flask(__name__)
-
-import os
 
 path = r'static/images'
 city_name = os.listdir(path)

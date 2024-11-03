@@ -6,24 +6,38 @@
     <title>{{ city }} Gallery</title>
     <link rel="stylesheet" href="{{ url_for('static', filename='gallery_styles.css') }}">
     <link rel="stylesheet" href="{{ url_for('static', filename='choose_city_botton.css') }}">
+    <link rel="stylesheet" href="{{ url_for('static', filename='picture_like_botton.css') }}">
+    <script src="{{ url_for('static', filename='like.js') }}"></script>
 </head>
 <body>
-<header>
-    <h1>{{ city | capitalize }} 摄影画廊</h1>
-</header>
 
 
 <div class="gallery horizontal">
     {% for image in images[0] %}
-    <img src="{{ url_for('static', filename='images/' + image) }}" alt="{{ image }}">
+    <div class="image-container">
+        <img src="{{ url_for('static', filename='images/' + image) }}" alt="{{ image }}">
+        <div class="icon">
+            <span class="like-icon" data-image="{{ image }}">❤️</span>
+            <span class="like-count" id="like-count-{{ image }}">{{ image_likes.get(image, 0) }}</span>
+        </div>
+    </div>
     {% endfor %}
 </div>
 
 <div class="gallery vertical">
     {% for image in images[1] %}
-    <img src="{{ url_for('static', filename='images/' + image) }}" alt="{{ image }}">
+    <div class="image-container">
+        <img src="{{ url_for('static', filename='images/' + image) }}" alt="{{ image }}">
+        <div class="icon">
+            <span class="like-icon" data-image="{{ image }}">❤️</span>
+            <span class="like-count" id="like-count-{{ image }}">{{ image_likes.get(image, 0) }}</span>
+        </div>
+    </div>
     {% endfor %}
 </div>
+
+
+
 <!-- 返回按钮 -->
 <div class="back-button">
     <a href="{{ url_for('choose_city_index') }}" class="city-back-button">返回</a>

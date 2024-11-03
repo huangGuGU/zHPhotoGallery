@@ -1,0 +1,37 @@
+.image-container {
+    position: relative; /* 设置图片容器为相对定位，使子元素的绝对定位相对于它 */
+    display: inline-block; /* 让每张图片的大小自动适应内容 */
+}
+
+.icon {
+    position: absolute;   /* 绝对定位，确保按钮在视频上方 */
+    top: 90%;             /* 垂直居中 */
+    left: 50%;            /* 水平居中 */
+    z-index: 1;
+    align-items: center;
+    background-color: rgba(255, 255, 255, 0.8); /* 背景色和透明度 */
+    padding: 5px 10px; /* 内边距 */
+    border-radius: 10px; /* 圆角 */
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2); /* 阴影效果 */
+    transition: transform 0.2s ease; /* 平滑过渡效果 */
+}
+.icon:hover {
+    transform: scale(1.2); /* 鼠标悬停时放大1.3倍 */
+}
+
+
+.like-icon {
+    font-size: 24px;
+    cursor: pointer;
+    margin-right: 5px;
+
+    user-select: none; /* 禁止选择图标 */
+}
+
+
+.like-count {
+    margin-left: 5px; /* 与爱心之间的间距 */
+    font-size: 18px;
+    user-select: none; /* 禁止选择数字 */
+}
+

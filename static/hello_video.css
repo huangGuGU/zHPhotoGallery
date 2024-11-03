@@ -1,0 +1,60 @@
+body {
+
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+
+    background-color: rgba(0, 0, 0, 0.92);
+}
+
+
+/* 视频容器样式 */
+.video-container {
+    position: relative;  /* 确保按钮相对于视频容器定位 */
+    width: 100%;
+    height: 100vh;        /* 视频占据视口的 80% 高度 */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+video {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;    /* 确保视频按比例填充容器 */
+    pointer-events: none; /* 禁止视频的鼠标事件，以便按钮可点击 */
+}
+
+/* 按钮容器样式 */
+.button-container {
+    position: absolute;   /* 绝对定位，确保按钮在视频上方 */
+    top: 90%;             /* 垂直居中 */
+    left: 50%;            /* 水平居中 */
+    transform: translate(-50%, -50%);  /* 精确居中对齐 */
+    z-index: 1;           /* 确保按钮位于视频上方 */
+}
+
+/* 按钮样式 */
+.enter-button {
+    font-family: 'Arial', sans-serif;
+    font-size: 30px;
+    color: white;
+    border: none;
+    padding: 15px 30px;
+    border-radius: 10px;
+    cursor: pointer;
+    background: transparent;  /* 背景透明 */
+    transition: transform 0.3s ease;
+}
+
+/* 悬停效果 */
+.enter-button:hover {
+    transform: scale(1.05); /* 悬停时按钮稍微放大 */
+}
+
+
+
+
+
+

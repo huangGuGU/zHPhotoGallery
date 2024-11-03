@@ -1,0 +1,53 @@
+/* 图片初始状态 */
+.image-block img {
+    max-width: 600px; /* 控制图片的最大宽度 */
+    height: auto;
+    opacity: 0; /* 初始隐藏图片 */
+    transition: opacity 1s ease; /* 只改变透明度 */
+}
+
+/* 当图片进入视口后 */
+.image-block img.visible {
+    opacity: 1; /* 显示图片 */
+}
+
+/* 文本初始状态 */
+.text-block {
+    font-size: 24px;
+    opacity: 0;
+    transform: translateY(20px); /* 初始位置 */
+    transition: opacity 1s ease-out, transform 1s ease-out;
+    margin: 20px 0;
+    text-align: center;
+    color: #ffffff;
+}
+
+/* 当文本进入视口后 */
+.text-block.visible {
+    opacity: 1;
+    transform: translateY(0); /* 文字会有移动效果 */
+}
+
+.spacer {
+    height: 200vh; /* 添加足够的滚动空间 */
+}
+
+.me {
+    display: flex;
+    flex-direction: column;
+    gap: 50px; /* 每个 section 之间的间距 */
+    padding: 20px;
+}
+
+.scroll-section {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    height: 60vh; /* 每个 section 的高度 */
+    padding: 20px;
+}
+
+img {
+    -webkit-user-drag: none; /* 禁用图片拖动 */
+    user-select: none; /* 禁止用户选择图片 */
+}
